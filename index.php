@@ -1,8 +1,10 @@
 <?php
+
 // Nederlandse landenlijst, php/html, up-to-date tot April 2014, gebaseerd op ISO 3166-1
 
-function showCountryByCode($selectedCountry = '') {
-    $countries = Array(
+function showCountryByCode($selectedCountry = '')
+{
+    $countries = [
         'AF' => 'Afghanistan',
         'AX' => '&Aring;land',
         'AL' => 'Albani&euml;',
@@ -251,10 +253,10 @@ function showCountryByCode($selectedCountry = '') {
         'KR' => 'Zuid-Korea',
         'SS' => 'Zuid-Soedan',
         'SE' => 'Zweden',
-        'CH' => 'Zwitserland'
-    );
+        'CH' => 'Zwitserland',
+    ];
 
-    if(isset($selectedCountry) AND $selectedCountry != '' AND isset($countries[$selectedCountry])) {
+    if (isset($selectedCountry) and $selectedCountry != '' and isset($countries[$selectedCountry])) {
         return $countries[$selectedCountry];
     }
 
@@ -263,4 +265,3 @@ function showCountryByCode($selectedCountry = '') {
 
 print_r(showCountryByCode(''));
 print_r(showCountryByCode('NL'));
-?>
